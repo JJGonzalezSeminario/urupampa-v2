@@ -1,0 +1,19 @@
+{
+  "nav": { "about": "La Banda", "gallery": "Galería", "shows": "Shows", "media": "Música", "contact": "Contacto" },
+  "hero": { "eyebrow": "Iquique · Chile — Berlin · Deutschland", "subtitle_strong": "Sonidos del Altiplano", "subtitle": " en el corazón de Europa.", "desc": "Música latinoamericana y andina desde las raíces del norte de Chile hasta los escenarios de Berlín.", "btn_shows": "Ver Próximos Shows", "btn_booking": "Contratar para tu evento", "scroll": "Scroll" },
+  "about": { "label": "La Banda", "title1": "Entre el desierto", "title2": "de Atacama y el", "p1_strong": "Uru Pampa", "p1": " nació en las calles de Iquique, Chile — tierra de sal, sol eterno y música que sabe a raíces.", "p2": "En la capital alemana encontraron su segundo hogar compartiendo los ", "p2_strong": "ritmos andinos, la cumbia, la cueca", "p2_end": " y la fusión latinoamericana. Su música une dos continentes con cada acorde.", "p3": "Cada presentación es un viaje sensorial — desde los Andes hasta el Mediterráneo berlinés." },
+  "gallery": { "label": "En Escena", "title": "La energía de vivir en", "title_em": "vivo" },
+  "shows": { "label": "Tour Dates", "title": "Próximos", "title_em": "Shows" },
+  "media": { "label": "Redes & Música", "title": "Escúchanos y", "title_em": "síguenos" },
+  "booking": { "label": "Contacto", "title": "¿Quieres que", "title_em": "UruPampa", "title2": "toque en tu evento?", "desc": "Disponibles para conciertos, festivales, eventos privados y colaboraciones en Berlín y Europa. Escríbenos y hagamos música juntos.", "btn_msg": "Enviar Mensaje" },
+  "footer": { "nav": "Navegación", "social": "Redes Sociales", "rights": "Todos los derechos reservados", "made": "Hecho con ♥ desde" },
+  "social_proof": {
+    "label": "Trayectoria",
+    "title": "Han confiado",
+    "title_em": "en nosotros",
+    "quote1": "\"La mejor energía latinoamericana que hemos tenido en nuestro escenario.\"",
+    "author1": "— Producción, Arata Andino",
+    "quote2": "\"Llevan 2 años seguidos con nosotros y cada vez es un tremendo show latinoamericano. Lograron que todas las generaciones bailaran por igual; son grandes artistas.\"",
+    "author2": "— Organización, La Pelusona"
+  }
+}

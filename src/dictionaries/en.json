@@ -1,0 +1,19 @@
+{
+  "nav": { "about": "The Band", "gallery": "Gallery", "shows": "Shows", "media": "Music", "contact": "Contact" },
+  "hero": { "eyebrow": "Iquique · Chile — Berlin · Deutschland", "subtitle_strong": "Sounds of the Altiplano", "subtitle": " in the heart of Europe.", "desc": "Latin American and Andean music from the roots of northern Chile to the stages of Berlin.", "btn_shows": "View Upcoming Shows", "btn_booking": "Book for your event", "scroll": "Scroll" },
+  "about": { "label": "The Band", "title1": "Between the", "title2": "Atacama Desert and the", "p1_strong": "Uru Pampa", "p1": " was born in the streets of Iquique, Chile — a land of salt, eternal sun, and music that tastes of roots.", "p2": "In the German capital they found their second home sharing ", "p2_strong": "Andean rhythms, cumbia, cueca", "p2_end": " and Latin American fusion. Their music bridges two continents with every chord.", "p3": "Every performance is a sensory journey — from the Andes to the Berlin Mediterranean." },
+  "gallery": { "label": "On Stage", "title": "The energy of playing", "title_em": "live" },
+  "shows": { "label": "Tour Dates", "title": "Upcoming", "title_em": "Shows" },
+  "media": { "label": "Socials & Music", "title": "Listen and", "title_em": "follow us" },
+  "booking": { "label": "Contact", "title": "Do you want", "title_em": "UruPampa", "title2": "to play at your event?", "desc": "Available for concerts, festivals, private events, and collaborations in Berlin and Europe. Write to us and let's make music together.", "btn_msg": "Send Message" },
+  "footer": { "nav": "Navigation", "social": "Socials", "rights": "All rights reserved", "made": "Made with ♥ from" },
+  "social_proof": {
+    "label": "Experience",
+    "title": "Trusted",
+    "title_em": "by many",
+    "quote1": "\"The best Latin American energy we've ever had on our stage.\"",
+    "author1": "— Production, Arata Andino",
+    "quote2": "\"They have been with us for 2 consecutive years and every time it's a tremendous Latin American show. They made all generations dance; truly great artists.\"",
+    "author2": "— Organization, La Pelusona"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "nav": { "about": "Die Band", "gallery": "Galerie", "shows": "Shows", "media": "Musik", "contact": "Kontakt" },
+  "hero": { "eyebrow": "Iquique · Chile — Berlin · Deutschland", "subtitle_strong": "Klänge des Altiplano", "subtitle": " im Herzen Europas.", "desc": "Lateinamerikanische und andine Musik von den Wurzeln Nordchiles bis auf die Bühnen Berlins.", "btn_shows": "Kommende Shows ansehen", "btn_booking": "Für dein Event buchen", "scroll": "Scrollen" },
+  "about": { "label": "Die Band", "title1": "Zwischen der", "title2": "Atacama-Wüste und der", "p1_strong": "Uru Pampa", "p1": " wurde in den Straßen von Iquique, Chile, geboren — einem Land aus Salz, ewiger Sonne und Musik, die nach Wurzeln schmeckt.", "p2": "In der deutschen Hauptstadt fanden sie ihre zweite Heimat und teilen ", "p2_strong": "andine Rhythmen, Cumbia, Cueca", "p2_end": " und lateinamerikanische Fusion. Ihre Musik verbindet zwei Kontinente.", "p3": "Jeder Auftritt ist eine sinnliche Reise — von den Anden bis zum Berliner Mittelmeer." },
+  "gallery": { "label": "Auf der Bühne", "title": "Die Energie der", "title_em": "Live-Musik" },
+  "shows": { "label": "Tour Dates", "title": "Kommende", "title_em": "Shows" },
+  "media": { "label": "Social Media & Musik", "title": "Hör rein und", "title_em": "folge uns" },
+  "booking": { "label": "Kontakt", "title": "Möchtest du, dass", "title_em": "UruPampa", "title2": "auf deinem Event spielt?", "desc": "Verfügbar für Konzerte, Festivals, private Events und Kooperationen in Berlin und Europa. Schreib uns und lass uns gemeinsam Musik machen.", "btn_msg": "Nachricht senden" },
+  "footer": { "nav": "Navigation", "social": "Social Media", "rights": "Alle Rechte vorbehalten", "made": "Gemacht mit ♥ aus" },
+  "social_proof": {
+    "label": "Erfahrung",
+    "title": "Sie vertrauen",
+    "title_em": "auf uns",
+    "quote1": "\"Die beste lateinamerikanische Energie, die wir je auf unserer Bühne hatten.\"",
+    "author1": "— Produktion, Arata Andino",
+    "quote2": "\"Sie sind seit 2 Jahren in Folge bei uns und es ist jedes Mal eine gewaltige lateinamerikanische Show. Sie haben es geschafft, alle Generationen zum Tanzen zu bringen; wirklich großartige Künstler.\"",
+    "author2": "— Organisation, La Pelusona"
+  }
+}
