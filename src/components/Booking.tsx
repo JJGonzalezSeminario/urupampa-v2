@@ -5,7 +5,7 @@ export default function Booking({ dict }: { dict: any }) {
         <div className="booking-card reveal">
           <div>
             <div className="section-label">{dict.label}</div>
-            <h2>{dict.title} <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>{dict.title_em}</em><br />{dict.title2}</h2>
+            <h2>{dict.title} <em style={{ color: 'var(--gold)', fontStyle: 'italic', fontFamily: 'var(--font-cormorant), serif', fontSize: '1.2em' }}>{dict.title_em}</em><br />{dict.title2}</h2>
             <p>{dict.desc}</p>
             <div style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'var(--grey)' }}>
               <div style={{ marginBottom: '0.5rem' }}>📍 Berlin, Deutschland</div>
