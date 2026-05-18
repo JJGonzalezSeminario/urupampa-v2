@@ -19,15 +19,24 @@ export default function Hero({ dict, lang }: { dict: any, lang: string }) {
       </p>
       
       <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem', position: 'relative', zIndex: 20 }}>
-        <a href={`/${lang}#shows`} className="hero-cta" aria-label={dict.btn_shows}>
+        <a href={`/${lang}#shows`} className="hero-cta" style={{ width: '280px', maxWidth: '100%', textAlign: 'center', boxSizing: 'border-box' }} aria-label={dict.btn_shows}>
           {dict.btn_shows}
         </a>
-        <a href={`/${lang}#booking`} className="hero-cta" style={{ background: 'var(--gold)', color: 'var(--black)', borderColor: 'var(--gold)', fontWeight: 'bold' }} aria-label={dict.btn_booking}>
+        <a href={`/${lang}#booking`} className="hero-cta" style={{ background: 'var(--gold)', color: 'var(--black)', borderColor: 'var(--gold)', fontWeight: 'bold', width: '280px', maxWidth: '100%', textAlign: 'center', boxSizing: 'border-box' }} aria-label={dict.btn_booking}>
           {dict.btn_booking}
         </a>
       </div>
       
-      <div className="scroll-hint"><div className="scroll-line"></div><span>{dict.scroll}</span></div>
+      <div className="scroll-hint hide-on-desktop"><div className="scroll-line"></div><span>{dict.scroll}</span></div>
+
+      {/* Regla CSS inyectada para ocultar el scroll-hint solo en PC */}
+      <style>{`
+        @media (min-width: 768px) {
+          .hide-on-desktop {
+            display: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
