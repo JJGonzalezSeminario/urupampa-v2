@@ -23,10 +23,10 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       {/* Las secciones de tu web */}
       <Hero dict={dict.hero} lang={lang} />
       <About dict={dict.about} />
-      <SocialProof dict={dict.social_proof} />
-      <Gallery dict={dict.gallery} />
-      <Shows dict={dict.shows} />
       <Media dict={dict.media} />
+      <SocialProof dict={dict.social_proof} />
+      <Shows dict={dict.shows} />
+      <Gallery dict={dict.gallery} />
       <Booking dict={dict.booking} />
     </main>
   );

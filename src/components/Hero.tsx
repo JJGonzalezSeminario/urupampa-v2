@@ -5,6 +5,12 @@ export default function Hero({ dict, lang }: { dict: any, lang: string }) {
       <div className="orb orb-gold"></div>
       <div className="hero-eyebrow">{dict.eyebrow}</div>
       
+      <h1 style={{ position: 'absolute', width: '1px', height: '1px', padding: 0, margin: '-1px', overflow: 'hidden', clip: 'rect(0, 0, 0, 0)', whiteSpace: 'nowrap', borderWidth: 0 }}>
+          {lang === 'de' ? 'Uru Pampa — Lateinamerikanische Band in Berlin' : 
+           lang === 'en' ? 'Uru Pampa — Latin American Band in Berlin' : 
+           'Uru Pampa — Banda Latinoamericana en Berlín'}
+        </h1>
+
       {/* ¡Logo restaurado a su gloria original! */}
       <img src="/logo-urupampa.png" alt="Uru Pampa Logo" className="hero-logo-img" />
 
