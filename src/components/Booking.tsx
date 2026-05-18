@@ -1,30 +1,167 @@
+"use client";
+import { useState } from 'react';
+
 export default function Booking({ dict }: { dict: any }) {
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('submitting');
+    
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    
+    try {
+      const response = await fetch("https://formspree.io/f/TU_ENDPOINT_AQUI", {
+        method: "POST",
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      
+      if (response.ok) {
+        setStatus('success');
+        form.reset(); 
+      } else {
+        alert("Hubo un problema enviando el mensaje. Por favor, intenta de nuevo o mándanos un correo a info@urupampa-berlin.de.");
+        setStatus('idle');
+      }
+    } catch (error) {
+      alert("Hubo un error de conexión. Por favor, intenta de nuevo.");
+      setStatus('idle');
+    }
+  };
+
   return (
-    <section id="booking">
+    <section id="booking" style={{ padding: '8rem 0' }}>
       <div className="container">
-        <div className="booking-card reveal">
-          <div>
-            <div className="section-label">{dict.label}</div>
-            <h2>{dict.title} <em style={{ color: 'var(--gold)', fontStyle: 'italic', fontFamily: 'var(--font-cormorant), serif', fontSize: '1.2em' }}>{dict.title_em}</em><br />{dict.title2}</h2>
-            <p>{dict.desc}</p>
-            <div style={{ marginTop: '1.5rem', fontSize: '0.9rem', color: 'var(--grey)' }}>
-              <div style={{ marginBottom: '0.5rem' }}>📍 Berlin, Deutschland</div>
-              <div style={{ marginBottom: '0.5rem' }}>✉️ urupampa_berlin@gmail.com</div>
-              <div>🌐 Iquique × Berlin · Música Latinoamericana</div>
+        
+        {/* --- ENCABEZADO CORREGIDO: Alineado a la izquierda (sin text-center) --- */}
+        <div className="booking-header reveal" style={{ marginBottom: '4rem' }}>
+          
+          {/* Le quitamos el justifyContent: center para que vuelva a la izquierda */}
+          <div className="section-label">{dict.label || "Contacto"}</div>
+          
+          <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-playfair), serif', color: 'var(--white)', lineHeight: '1.3' }}>
+            {dict.title}{' '} {/* <-- AQUÍ ESTÁ EL ESPACIO AÑADIDO PARA QUE NO SE PEGUE */}
+            <span style={{ fontFamily: 'var(--font-playfair), serif', fontStyle: 'normal', fontWeight: 'bold' }}>
+              Uru<span style={{ color: 'var(--gold)' }}>Pampa</span>
+            </span>
+            <br />
+            {dict.title2}
+          </h2>
+          
+          {/* Párrafo alineado a la izquierda (sin margin auto) */}
+          <p style={{ color: 'var(--grey)', maxWidth: '600px', marginTop: '1.5rem', fontSize: '1.1rem', lineHeight: '1.6' }}>
+            {dict.desc}
+          </p>
+        </div>
+
+        {/* --- FORMULARIO --- */}
+        <div className="booking-content reveal reveal-delay-1" style={{ maxWidth: '800px', margin: '0 auto', background: 'rgba(255,255,255,0.02)', padding: '4rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)' }}>
+          
+          {status === 'success' ? (
+            <div style={{ textAlign: 'center', padding: '2rem 0', color: 'var(--gold)', animation: 'fadeIn 0.5s ease' }}>
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ margin: '0 auto 1.5rem auto', display: 'block' }}>
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <h3 style={{ fontSize: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-playfair), serif', color: 'var(--white)' }}>{dict.form_success || "¡Mensaje enviado!"}</h3>
+              <p style={{ color: 'var(--grey)' }}>{dict.form_success_desc || "Gracias por contactarnos. Nos comunicaremos contigo lo antes posible."}</p>
+              <button onClick={() => setStatus('idle')} style={{ background: 'transparent', border: '1px solid var(--gold)', color: 'var(--gold)', padding: '0.8rem 2rem', marginTop: '2.5rem', cursor: 'pointer', fontFamily: 'var(--font-bebas), sans-serif', letterSpacing: '2px', fontSize: '1.1rem', transition: 'all 0.3s ease', textTransform: 'uppercase' }}>
+                {dict.form_new || "Enviar otro mensaje"}
+              </button>
             </div>
-          </div>
-          <div className="booking-btns">
-            <a href="mailto:urupampa_berlin@gmail.com" className="btn-primary">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              {dict.btn_msg}
-            </a>
-            <a href="https://wa.me/491607649232" target="_blank" rel="noopener noreferrer" className="btn-outline">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.396 0 .013 5.37.01 12.01c0 2.12.552 4.19 1.6 6.01L.001 24l6.13-1.605a11.96 11.96 0 005.897 1.55h.005c6.634 0 12.016-5.373 12.019-12.017C24.048 5.414 18.665.002 12.031 0zm0 21.944h-.003a9.927 9.927 0 01-5.056-1.378l-.362-.214-3.763.985.998-3.666-.235-.374a9.92 9.92 0 01-1.516-5.289c.003-5.498 4.475-9.97 9.974-9.97 2.663.001 5.166 1.04 7.046 2.923 1.88 1.882 2.916 4.385 2.914 7.049-.003 5.498-4.475 9.97-9.973 9.97l-.024-.036zm5.474-7.48c-.3-.15-1.774-.876-2.05-.976-.275-.101-.475-.15-.675.15-.2.3-.775.976-.95 1.176-.175.2-.35.225-.65.075-1.226-.605-2.203-1.163-3.056-2.613-.2-.34.202-.32.637-.935.15-.2.2-.35.1-.65-.05-.15-.675-1.626-.925-2.226-.241-.578-.485-.5-.675-.51h-.575c-.2 0-.525.075-.8.375s-1.05 1.026-1.05 2.5 1.075 2.9 1.225 3.1c.15.2 2.112 3.226 5.112 4.526.714.308 1.27.493 1.705.631.716.228 1.368.196 1.883.119.58-.087 1.774-.726 2.024-1.426.25-.7.25-1.3.175-1.426-.075-.125-.275-.2-.575-.35z"/></svg>
-              WhatsApp
-            </a>
+          ) : (
+            <form onSubmit={handleSubmit} className="booking-form">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
+                <div className="form-group">
+                  <label>{dict.form_name || "Nombre / Organización"}</label>
+                  <input type="text" name="name" required placeholder="Ej: Festival Arata Andino" />
+                </div>
+                <div className="form-group">
+                  <label>{dict.form_email || "Correo Electrónico"}</label>
+                  <input type="email" name="email" required placeholder="tu@correo.com" />
+                </div>
+              </div>
+              
+              <div className="form-group" style={{ marginBottom: '2rem' }}>
+                <label>{dict.form_date || "Fecha y Lugar del Evento (Opcional)"}</label>
+                <input type="text" name="event_details" placeholder="Ej: 15 de Agosto, Berlín" />
+              </div>
+
+              <div className="form-group" style={{ marginBottom: '3rem' }}>
+                <label>{dict.form_msg || "Cuéntanos sobre tu evento (detalles, presupuesto...)"}</label>
+                <textarea name="message" required rows={5} placeholder="..."></textarea>
+              </div>
+
+              <button type="submit" disabled={status === 'submitting'} className="submit-btn" style={{ width: '100%', padding: '1.2rem', background: 'var(--gold)', color: 'var(--black)', border: 'none', fontFamily: 'var(--font-bebas), sans-serif', fontSize: '1.3rem', letterSpacing: '2px', cursor: status === 'submitting' ? 'wait' : 'pointer', transition: 'all 0.3s ease', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.5rem', textTransform: 'uppercase' }}>
+                {status === 'submitting' ? (
+                  <span style={{ opacity: 0.7 }}>{dict.form_sending || "Enviando..."}</span>
+                ) : (
+                  <>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    {dict.form_send || "Solicitar Presupuesto"}
+                  </>
+                )}
+              </button>
+            </form>
+          )}
+
+          <div style={{ marginTop: '3rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--grey)', fontSize: '0.9rem' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              info@urupampa-berlin.de
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--grey)', fontSize: '0.9rem' }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Berlin, Deutschland
+            </div>
           </div>
         </div>
       </div>
+
+      <style>{`
+        .booking-form .form-group label {
+          display: block;
+          margin-bottom: 0.8rem;
+          color: var(--gold);
+          font-size: 0.9rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-family: var(--font-bebas), sans-serif;
+        }
+        .booking-form .form-group input, .booking-form .form-group textarea {
+          width: 100%;
+          padding: 1.2rem;
+          background: rgba(0, 0, 0, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 6px;
+          font-family: inherit;
+          color: var(--white);
+          font-size: 1rem;
+          transition: all 0.3s ease;
+        }
+        .booking-form .form-group input:focus, .booking-form .form-group textarea:focus {
+          outline: none;
+          border-color: var(--gold);
+          background: rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 15px rgba(212, 135, 42, 0.2);
+        }
+        .booking-form .submit-btn:hover:not(:disabled) {
+          background: #c78323 !important;
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+          .booking-content {
+            padding: 2.5rem 1.5rem !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

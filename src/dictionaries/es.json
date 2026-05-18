@@ -11,7 +11,16 @@
     "ig_title": "Instagram", "ig_desc": "Fotos, stories y el día a día de la banda.", "ig_btn": "→ Seguir @urupampa_berlin",
     "fb_title": "Facebook", "fb_desc": "Eventos y comunidad.", "fb_btn": "→ Abrir Facebook"
   },
-  "booking": { "label": "Contacto", "title": "¿Quieres que", "title_em": "UruPampa", "title2": "toque en tu evento?", "desc": "Disponibles para conciertos, festivales, eventos privados y colaboraciones en Berlín y Europa. Escríbenos y hagamos música juntos.", "btn_msg": "Enviar Mensaje" },
+  "booking": { "label": "Contacto", "title": "¿Quieres que", "title_em": "UruPampa", "title2": "toque en tu evento?", "desc": "Disponibles para conciertos, festivales, eventos privados y colaboraciones en Berlín y Europa. Escríbenos y hagamos música juntos.", "btn_msg": "Enviar Mensaje",
+              "form_name": "Tu Nombre / Organización",
+              "form_email": "Correo Electrónico",
+              "form_date": "Fecha y Lugar del Evento (Opcional)",
+              "form_msg": "Cuéntanos sobre tu evento (detalles, presupuesto, requerimientos...)",
+              "form_send": "Solicitar Presupuesto",
+              "form_success": "¡Mensaje enviado!",
+              "form_success_desc": "Gracias por contactarnos. Nos comunicaremos contigo lo antes posible.",
+              "form_new": "Enviar otro mensaje"
+             },
   "footer": { "nav": "Navegación", "social": "Redes Sociales", "rights": "Todos los derechos reservados", "made": "Hecho con ♥ desde" },
   "social_proof": {
     "label": "Trayectoria",

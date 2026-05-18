@@ -11,7 +11,16 @@
     "ig_title": "Instagram", "ig_desc": "Photos, stories and the band's daily life.", "ig_btn": "→ Follow @urupampa_berlin",
     "fb_title": "Facebook", "fb_desc": "Events and community.", "fb_btn": "→ Open Facebook"
   },
-  "booking": { "label": "Contact", "title": "Do you want", "title_em": "UruPampa", "title2": "to play at your event?", "desc": "Available for concerts, festivals, private events, and collaborations in Berlin and Europe. Write to us and let's make music together.", "btn_msg": "Send Message" },
+  "booking": { "label": "Contact", "title": "Do you want", "title_em": "UruPampa", "title2": "to play at your event?", "desc": "Available for concerts, festivals, private events, and collaborations in Berlin and Europe. Write to us and let's make music together.", "btn_msg": "Send Message",
+               "form_name": "Your Name / Organization",
+               "form_email": "Email Address",
+               "form_date": "Event Date & Location (Optional)",
+               "form_msg": "Tell us about your event (details, budget, requirements...)",
+               "form_send": "Request a Quote",
+               "form_success": "Message sent!",
+               "form_success_desc": "Thank you for reaching out. We will get back to you as soon as possible.",
+               "form_new": "Send another message"
+             },
   "footer": { "nav": "Navigation", "social": "Socials", "rights": "All rights reserved", "made": "Made with ♥ from" },
   "social_proof": {
     "label": "Experience",
