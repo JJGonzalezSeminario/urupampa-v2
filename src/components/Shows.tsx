@@ -30,18 +30,17 @@ const showsData = [
     title: "LaFrikan - ARTivisten e.V.",
     location: "Baergarten, Schnellerstraße 137, 12439 Berlin",
     description: {
-      es: "Sin entrada pero con un aporte voluntario para los artistas.",
-      de: "Eintritt frei — Freiwillige Spende für die Künstler.",
-      en: "Free admission — Voluntary contribution for the artists."
+      es: "Las LaFrikan Sessions son un formato de jam session de José Carlos Mayorga dedicado a la diversidad de ritmos latinoamericanos y africanos. Un espacio abierto para la música y el encuentro. (Entrada libre / Aporte voluntario).",
+      de: "Die LaFrikan Sessions sind ein Jam-Session-Format von José Carlos Mayorga und widmen sich der Vielfalt lateinamerikanischer und afrikanischer Rhythmen. Ein offener Raum für Musik und Begegnung. (Eintritt frei — Freiwillige Spende).",
+      en: "The LaFrikan Sessions are a jam session format by José Carlos Mayorga dedicated to the diversity of Latin American and African rhythms. An open space for music and encounters. (Free admission — Voluntary contribution)."
     },
     buttonText: {
       es: "Info",
       de: "Info",
       en: "Info"
     },
-    // Enlace actualizado a artivisten.org
     link: "https://artivisten.org/", 
-    isExternal: true // Ahora es un enlace externo
+    isExternal: true 
   }
 ];
 
@@ -71,7 +70,6 @@ export default function Shows({ dict, lang }: { dict: any; lang: string }) {
                   src={show.image} 
                   alt={show.title} 
                   className="flyer-img"
-                  // CAMBIO CLAVE: objectFit 'contain' asegura que la imagen cuadrada se vea completa
                   style={{ width: '100%', height: '100%', objectFit: 'contain', transition: 'transform 0.4s ease' }}
                 />
               </div>
@@ -135,7 +133,6 @@ export default function Shows({ dict, lang }: { dict: any; lang: string }) {
           grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
           gap: 3rem;
         }
-        /* Efecto sutil al pasar el mouse */
         .show-card:hover .flyer-img {
           transform: scale(1.02);
         }
