@@ -27,7 +27,7 @@ const showsData = [
     image: "/show2.jpg", 
     date: "12.06",
     time: "19:00 UHR",
-    title: "La Frikan - ARTivisten e.V.",
+    title: "LaFrikan - ARTivisten e.V.",
     location: "Baergarten, Schnellerstraße 137, 12439 Berlin",
     description: {
       es: "Sin entrada pero con un aporte voluntario para los artistas.",
