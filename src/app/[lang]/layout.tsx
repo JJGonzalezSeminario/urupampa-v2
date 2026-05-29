@@ -12,9 +12,9 @@ const bebas = Bebas_Neue({ subsets: ["latin"], weight: "400", variable: "--font-
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const title = lang === 'de' ? "Uru Pampa · Lateinamerikanische Band in Berlin" : 
-                lang === 'en' ? "Uru Pampa · Latin American Band in Berlin" : 
-                "Uru Pampa · Banda de Música Latinoamericana en Berlín";
+  const title = lang === 'de' ? "UruPampa · Lateinamerikanische Band in Berlin" : 
+                lang === 'en' ? "UruPampa · Latin American Band in Berlin" : 
+                "UruPampa · Banda de Música Latinoamericana en Berlín";
   const description = "Música latinoamericana y andina en Berlín. Conciertos, festivales y eventos privados.";
 
   return {
