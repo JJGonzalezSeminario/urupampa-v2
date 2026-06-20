@@ -4,22 +4,22 @@
 const showsData = [
   {
     id: 1,
-    image: "/show1.jpg", 
-    date: "30.05", 
-    time: "19:00 UHR",
-    title: "Live-Show en Sugar Tapas Bar",
-    location: "Wilhelmshavener Str. 14, 10551 Berlin",
+    image: "/FeteDeLaMusique.jpg", 
+    date: "21.06", 
+    time: "18:30 UHR",
+    title: "Fête de la Musique @FMP1",
+    location: "Franz-Mehring-Platz, 10243 Berlin",
     description: {
-      es: "Reservas por la página directa del restaurant Sugar.",
-      de: "Reservierung direkt über die Website des Restaurants Sugar.",
-      en: "Reservations directly through the Sugar restaurant website."
+      es: "Fiesta de la Música en Franz-Mehring-Platz. Música en directo, barbacoa y bebidas. ¡Ven y únete a nosotros! Entrada gratuita.",
+      de: "Fête de la Musique am Franz-Mehring-Platz. Live Musik, BBQ und Drinks! Kommt vorbei! Eintritt frei!",
+      en: "Fête de la Musique again at Franz-Mehring-Platz. Live music, BBQ and drinks! Come and join us! Free entry!"
     },
     buttonText: {
-      es: "Reservar Mesa",
-      de: "Tisch Reservieren",
-      en: "Book a Table"
+      es: "Info",
+      de: "Info",
+      en: "Info"
     },
-    link: "https://sugar-tapas-bar.eatbu.com/?lang=de",
+    link: "https://www.instagram.com/fmp1/",
     isExternal: true
   },
   {
